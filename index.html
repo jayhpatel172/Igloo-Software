@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Igloo Software Project</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/ea4ead53ab.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Input Section -->
+            <div class="col-md-4" style="background: #edece8">
+                <h3 style="margin-bottom: 20px">Marble sequence generator</h3>
+                <h4 style="margin-bottom: 20px">Generate some marbles</h4>
+                <p>Type a number below and click "generate marbles" to create a sequence.</p>
+                <p>Number of Colors: </p>
+                <div class="inputSubmit" style="display: flex; justify-content:flex-start">
+                    <input class="form-control w-25 float-left mr-2" type="text" id="marbleCount" maxlength="1"
+                        value='0' oninput="this.value=this.value.replace(/[^1-5]/g,'');">
+                    <button class="btn btn-primary w-50" onclick="onGenerateClick()"> Generate Marbles</button>
+                </div>
+                <h3>Results</h3>
+                <div>Generated <span id="resultspan"></span> Sequences</div>
+            </div>
+
+            <!-- Output section -->
+            <div class="col-md-8" style="padding: 0%">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header bg-dark" id="heading">
+                            <div class="row" style="display: flex; justify-content: space-between;">
+                                <nav class="navbar navbar-dark bg-dark">
+                                    <!-- Navbar content -->
+                                    <h3 style="color: white">Configuration settings</h3>
+                                </nav>
+                                <button class="btn bg-dark" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne" style="margin-right: 15px;">
+                                    <i class="fas fa-angle-down" style="color: white"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Collpase content -->
+                        <div id="collapseOne" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                            <div class="card-body bg-dark">
+                                <div class="row">
+                                    <!-- Left content -->
+                                    <div class="col-md-6" style="margin-bottom: 15px">
+                                        <div class="setOne">
+                                            <p>Marble style </p>
+                                            <select id="selectboundry">
+                                                <option value="fill">Fill</option>
+                                                <option value="outline">Outline</option>
+                                            </select>
+                                        </div>
+                                        <div class="setTwo">
+                                            <p>Display As </p>
+                                            <select id="selectorientation">
+                                                <option value="column">Column</option>
+                                                <option value="row">Row</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right content -->
+                                    <div class="col-md-6 rightContent"
+                                        style="display: flex; justify-content: space-between;">
+                                        <div class="title">
+                                            <label for="customRange" style="color: white">Marble size</label>
+                                        </div>
+                                        <div class="sliderContent" style="width: 70%">
+                                            <input type="range" class="slider" min="0" max="2" id="customRange">
+                                            <br>
+                                            <div class="size" style="display: flex; justify-content: space-between;">
+                                                <p>Small<br>20px</p>
+                                                <p style="text-align: center">Medium<br>40px</p>
+                                                <p>Large<br>60px</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="result"></div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- JS file -->
+    <script src="marble.js"></script>
+    <!-- Bootstap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

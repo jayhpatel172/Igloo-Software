@@ -1,0 +1,111 @@
+.container .row .col-md-4 h1 {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#collapseOne .card-body .setOne {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#collapseOne .card-body .setTwo {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+#collapseOne .col-md-6 p {
+    color: white;
+    margin: auto auto auto 0;
+}
+
+#collapseOne .col-md-6 select {
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#collapseOne .rightContent .title {
+    width: 25%;
+    padding-top: 10px;
+}
+
+
+#collapseOne .rightContent .sliderContent input {
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 15px;
+}
+
+#collapseOne .rightContent .sliderContent .size p {
+    padding-top: 10px;
+    margin-right: 0;
+}
+
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+}
+
+.outline-blue {
+    border: 3px solid blue;
+}
+
+.fill-blue {
+    background: blue;
+}
+
+.outline-yellow {
+    border: 3x solid yellow;
+}
+
+.fill-yellow {
+    background: yellow;
+}
+
+.outline-red {
+    border: 3px solid red;
+}
+
+.fill-red {
+    background: red;
+}
+
+.outline-green {
+    border: 3px solid green;
+}
+
+.fill-green {
+    background: green;
+}
+
+.outline-purple {
+    border: 3px solid purple;
+}
+
+.fill-purple {
+    background: purple;
+}
+
+.small {
+    width: 20px;
+    height: 20px;
+}
+
+.medium {
+    width: 40px;
+    height: 40px;
+}
+
+.large {
+    width: 60px;
+    height: 60px;
+}
